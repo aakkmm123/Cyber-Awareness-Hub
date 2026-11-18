@@ -168,6 +168,37 @@ ul {
     50% { transform: translateY(-20px); }
 }
 
+.learn {
+    padding-top: 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    width: fit-content;
+}
+
+.learn-more:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-color);
+}
+
 /* Sections */
 section {
     padding: 6rem 5%;
@@ -219,144 +250,6 @@ section {
     margin-bottom: 0;
 }
 
-.learn {
-    padding-top: 0;
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-/* Learn More button */
-.learn-more {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    background: transparent;
-    border: 1px solid var(--accent-blue);
-    color: var(--accent-blue);
-    font-size: 0.875rem;
-    font-weight: 500;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: left;
-    width: fit-content;
-}
-
-.learn-more:hover {
-    background-color: var(--accent-blue);
-    color: var(--bg-color);
-}
-
-#learn {
-    background-color: var(--bg-secondary);
-}
-
-#tips {
-    background-color: var(--bg-color);
-}
-
-#quiz {
-    background-color: var(--bg-secondary);
-}
-
-#about {
-    background-color: var(--bg-color);
-}
-
-/* Cards */
-.card {
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-}
-
-.card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-.card p {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-/* Buttons */
-.btn-primary,
-.btn-secondary {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-secondary {
-    border: 2px solid var(--accent-blue);
-    color: var(--accent-blue);
-}
-
-.btn-secondary:hover {
-    background-color: var(--accent-blue);
-    color: var(--bg-color);
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    justify-content: center;
-    align-items: center;
-    z-index: 200;
-}
-
-.modal-content {
-    background-color: var(--card-bg);
-    padding: 2rem;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-    max-height: 80%;
-    overflow-y: auto;
-    position: relative;
-    animation: modalIn 0.3s ease;
-}
-
-@keyframes modalIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 1.5rem;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.modal-close:hover {
-    color: var(--text-primary);
-}
-
 /* Quiz */
 .quiz {
     padding-top: 0;
@@ -375,7 +268,7 @@ section {
 
 .quiz-header h2 {
     font-size: 1.5rem;
-    margin-bottom 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .score-tracker {
@@ -475,68 +368,97 @@ section {
     color: var(--accent-blue);
 }
 
-.question {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
+/* About section */
+.about {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+}
+
+.about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Footer short description */
+.footer-short-description {
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #333;
     border-bottom: 1px solid #333;
 }
 
-.question h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-}
-
-.options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-}
-
-.option {
-    padding: 0.75rem;
-    background-color: var(--card-bg);
-    border: 1px solid #333;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.option:hover {
-    background-color: var(--accent-blue);
-    color: var(--bg-color);
-}
-
-.option.correct {
-    background-color: #10b981;
-    border-color: #10b981;
-}
-
-.option.incorrect {
-    background-color: #ef4444;
-    border-color: #ef4444;
-}
-
-/* Score screen */
-.score-screen {
-    text-align: center;
-    padding: 3rem;
-    display: none;
-}
-
-.score-screen h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.score-screen p {
+.footer-short-description p {
+    font-size: 0.875rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin: 0;
 }
 
-.score-score {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--accent-blue);
+/* Footer stay aware */
+.footer-stay-aware {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.footer-stay-aware p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--text-primary);
 }
 
 /* Mobile menu */
