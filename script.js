@@ -30,6 +30,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Learn More buttons - open modals
+    const learnMoreButtons = document.querySelectorAll('.learn-more');
+
+    learnMoreButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('data-target');
+            const modal = document.getElementById(targetId);
+            if (modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Modal close buttons
+    const modalCloses = document.querySelectorAll('.modal-close');
+
+    modalCloses.forEach(close => {
+        close.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Close modal when clicking outside
+    const modals = document.querySelectorAll('.modal');
+
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const openModals = document.querySelectorAll('.modal[style*="display: flex"]');
+            openModals.forEach(modal => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            });
+        }
+    });
+
     // Header shadow on scroll
     const header = document.querySelector('.navbar');
     let lastScroll = 0;

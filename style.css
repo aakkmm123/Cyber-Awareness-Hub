@@ -175,6 +175,38 @@ section {
     margin: 0 auto;
 }
 
+.learn {
+    padding-top: 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Learn More button */
+.learn-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    width: fit-content;
+}
+
+.learn-more:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-color);
+}
+
 #learn {
     background-color: var(--bg-secondary);
 }
