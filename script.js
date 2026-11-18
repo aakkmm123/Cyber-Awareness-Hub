@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             question: "What should you do before entering personal information on a website?",
-            options: ["Click on the first result in search engines", "Verify the URL is correct and look for HTTPS padlock icon", "Disable your antivirus temporarily", "Enter information quickly before the page loads"},
+            options: ["Click on the first result in search engines", "Verify the URL is correct and look for HTTPS padlock icon", "Disable your antivirus temporarily", "Enter information quickly before the page loads"],
             correct: 1
         },
         {
@@ -152,6 +152,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalQuestionsDisplay = document.getElementById('total-questions');
     const scoreMessage = document.getElementById('score-message');
     const restartBtn = document.getElementById('restart-btn');
+    const bestScoreDisplay = document.getElementById('best-score');
+
+    // Initialize best score from LocalStorage
+    let bestScore = localStorage.getItem('cyber_awareness_best_score');
+    if (bestScore !== null) {
+        bestScore = parseInt(bestScore);
+    }
+    bestScoreDisplay.textContent = bestScore;
 
     // Render current question
     function renderQuestion(index) {
@@ -220,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Show score screen
+    // Show score screen and save best score
     function showScoreScreen() {
         questionText.style.display = 'none';
         optionsContainer.style.display = 'none';
@@ -233,13 +241,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Calculate message based on score
         const percentage = (score / totalQuestions) * 100;
         if (percentage === 100) {
-            scoreMessage.textContent = 'Perfect score! You're a cybersecurity expert!';
+            scoreMessage.textContent = 'Perfect score! You\'re a cybersecurity expert!';
         } else if (percentage >= 70) {
             scoreMessage.textContent = 'Great job! You have solid cybersecurity knowledge.';
         } else if (percentage >= 50) {
             scoreMessage.textContent = 'Not bad! Review the topics you got wrong.';
         } else {
             scoreMessage.textContent = 'Keep learning! Cybersecurity is important for everyone.';
+        }
+        
+        // Save best score to LocalStorage
+        if (score > bestScore) {
+            bestScore = score;
+            localStorage.setItem('cyber_awareness_best_score', bestScore);
+            bestScoreDisplay.textContent = bestScore;
         }
         
         scoreScreen.style.display = 'block';
@@ -269,9 +284,6 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.addEventListener('click', nextQuestion);
     prevBtn.addEventListener('click', prevQuestion);
 
-    // Initialize best score from LocalStorage
-    const bestScore = localStorage.getItem('cyber_awareness_best_score');
-    if (bestScore !== null) {
-        document.body.dataset.bestScore = bestScore;
-    }
+    // Initialize best score display
+    bestScoreDisplay.textContent = bestScore;
 });
