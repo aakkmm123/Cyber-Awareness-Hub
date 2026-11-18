@@ -86,7 +86,7 @@
                     <p>Navigating the web securely and avoiding dangerous sites.</p>
                     <a href="#!" class="learn-more">Learn More</a>
                 </div>
-</div>
+            </div>
         </section>
 
         <section class="tips" id="tips">
@@ -127,7 +127,30 @@
             </div>
         </section>
 
-    </main>
+        <section class="quiz" id="quiz">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2>Cybersecurity Quiz</h2>
+                    <div class="score-tracker">Score: <span id="score">0</span> / <span id="total">0</span></div>
+                </div>
+                <div class="quiz-content">
+                    <div class="question-card">
+                        <h3 class="question-text"></h3>
+                        <div class="options"></div>
+                    </div>
+                </div>
+                <div class="quiz-navigation">
+                    <button class="btn-nav prev" disabled>Previous</button>
+                    <button class="btn-nav next">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="score-screen" id="score-screen">
+            <h2>Quiz Complete!</h2>
+            <p id="score-message">You scored <span id="final-score">0</span> out of <span id="total-questions">0</span> questions.</p>
+            <button class="btn-primary" id="restart-btn">Restart Quiz</button>
+        </div>
+    </section>
 
     <!-- Phishing Modal -->
 <div class="modal" id="phishing-modal">

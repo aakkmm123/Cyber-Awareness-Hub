@@ -358,9 +358,121 @@ section {
 }
 
 /* Quiz */
+.quiz {
+    padding-top: 0;
+}
+
 .quiz-container {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.quiz-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.quiz-header h2 {
+    font-size: 1.5rem;
+    margin-bottom 0.5rem;
+}
+
+.score-tracker {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    float: right;
+}
+
+.question-card {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+.question-text {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.option {
+    padding: 0.75rem;
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-color);
+}
+
+.option.correct {
+    background-color: #10b981;
+    border-color: #10b981;
+}
+
+.option.incorrect {
+    background-color: #ef4444;
+    border-color: #ef4444;
+}
+
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.btn-nav {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-color);
+}
+
+.btn-nav:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Score screen */
+.score-screen {
+    text-align: center;
+    padding: 3rem;
+    display: none;
+}
+
+.score-screen h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.score-screen p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.score-score {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-blue);
 }
 
 .question {
