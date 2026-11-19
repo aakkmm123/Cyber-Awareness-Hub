@@ -104,10 +104,10 @@ ul {
         align-items: center;
         gap: 1.5rem;
         padding: 2rem 0;
-        display: none;
     }
 
-    .navbar-links.active {
+    .nav-toggle:checked + .nav-label + .navbar-links,
+    .nav-toggle:checked ~ .navbar-links {
         display: flex;
     }
 
