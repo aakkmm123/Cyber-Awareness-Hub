@@ -4,152 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Awareness Hub</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-logo">Cyber Awareness Hub</div>
-        <ul class="navbar-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#learn">Learn</a></li>
-            <li><a href="#tips">Security Tips</a></li>
-            <li><a href="#quiz">Quiz</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-        <div class="navbar-mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
 
-    <main>
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <h1>Stay Safe in the Digital World</h1>
-                <p>Learn how to protect yourself from online threats, scams, and cyber attacks through simple and practical knowledge.</p>
-                <div class="hero-buttons">
-                    <a href="#learn" class="btn-primary">Explore Cybersecurity</a>
-                    <a href="#quiz" class="btn-secondary">Take the Quiz</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="visual-box">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </section>
+<nav class="navbar">
+    <div class="navbar-logo">Cyber Awareness Hub</div>
+    <ul class="navbar-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#learn">Learn</a></li>
+        <li><a href="#tips">Security Tips</a></li>
+        <li><a href="#knowledge">Knowledge Check</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-label">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+</nav>
 
-        <section class="learn" id="learn">
-            <div class="section-header">
-                <h2>Learn Cybersecurity Basics</h2>
-            </div>
-            <div class="cards-grid">
-                <div class="card" data-target="phishing-modal">
-                    <div class="card-icon">🎣</div>
-                    <h3>Phishing</h3>
-                    <p>Deceptive emails and messages designed to steal your personal information.</p>
-                    <a href="#!" class="learn-more">Learn More</a>
-                </div>
-                <div class="card" data-target="passwords-modal">
-                    <div class="card-icon">🔒</div>
-                    <h3>Password Security</h3>
-                    <p>Creating and managing strong passwords to protect your accounts.</p>
-                    <a href="#!" class="learn-more">Learn More</a>
-                </div>
-                <div class="card" data-target="malware-modal">
-                    <div class="card-icon">🦠</div>
-                    <h3>Malware</h3>
-                    <p>Malicious software that can damage or gain unauthorized access to your systems.</p>
-                    <a href="#!" class="learn-more">Learn More</a>
-                </div>
-                <div class="card" data-target="social-engineering-modal">
-                    <div class="card-icon">🧠</div>
-                    <h3>Social Engineering</h3>
-                    <p>Manipulating people into performing actions or divulging confidential information.</p>
-                    <a href="#!" class="learn-more">Learn More</a>
-                </div>
-                <div class="card" data-target="privacy-modal">
-                    <div class="card-icon">🔐</div>
-                    <h3>Online Privacy</h3>
-                    <p>Protecting your personal data and understanding privacy settings.</p>
-                    <a href="#!" class="learn-more">Learn More</a>
-                </div>
-                <div class="card" data-target="browsing-modal">
-                    <div class="card-icon">🌐</div>
-                    <h3>Safe Browsing</h3>
-                    <p>Navigating the web securely and avoiding dangerous sites.</p>
-                    <a href="#!" class="learn-more">Learn More</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="tips" id="tips">
-            <div class="section-header">
-                <h2>Security Tips</h2>
-            </div>
-            <div class="tips-grid">
-                <div class="tip-card">
-                    <span class="tip-icon">🔐</span>
-                    <h3>Use unique passwords for different accounts</h3>
-                    <p>Never reuse the same password across multiple sites. If one account is compromised, all your other accounts remain secure.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-icon">🆙</span>
-                    <h3>Enable two-factor authentication</h3>
-                    <p>Add an extra layer of security to your accounts. Even if someone steals your password, they can't access your account without the second factor.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-icon">🚫</span>
-                    <h3>Avoid suspicious links</h3>
-                    <p>Don't click on links in unexpected emails or messages. Hover over links to see the actual destination before clicking.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-icon">📱</span>
-                    <h3>Keep software updated</h3>
-                    <p>Regularly update your operating system, apps, and antivirus software. Updates often include critical security patches.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-icon">🙅</span>
-                    <h3>Never share sensitive information with strangers</h3>
-                    <p>Be wary of unsolicited requests for personal information, whether by email, phone, or message.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-icon">🌐</span>
-                    <h3>Check website URLs before entering personal information</h3>
-                    <p>Verify you're on the legitimate website before entering passwords or financial details. Look for HTTPS and the correct domain name.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="quiz" id="quiz">
-            <div class="quiz-container">
-                <div class="quiz-header">
-                    <h2>Cybersecurity Quiz</h2>
-                    <div class="score-tracker">Score: <span id="score">0</span> / <span id="total">0</span></div>
-                </div>
-                <div class="quiz-content">
-                    <div class="question-card">
-                        <h3 class="question-text"></h3>
-                        <div class="options"></div>
-                    </div>
-                </div>
-                <div class="quiz-navigation">
-                    <button class="btn-nav prev" disabled>Previous</button>
-                    <button class="btn-nav next">Next</button>
-                </div>
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Stay Safe in the Digital World</h1>
+            <p>Learn how to protect yourself from online threats, scams, and cyber attacks through simple and practical knowledge.</p>
+            <div class="hero-buttons">
+                <a href="#learn" class="btn-primary">Explore Cybersecurity</a>
+                <a href="#knowledge" class="btn-secondary">Knowledge Check</a>
             </div>
         </div>
-        <div class="score-screen" id="score-screen">
-            <h2>Quiz Complete!</h2>
-            <p id="score-message">You scored <span id="final-score">0</span> out of <span id="total-questions">0</span> questions.</p>
-            <p>Best score: <span id="best-score">0</span></p>
-            <button class="btn-primary" id="restart-btn">Restart Quiz</button>
+        <div class="hero-visual">
+            <div class="visual-box">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learn" id="learn">
+        <div class="section-header">
+            <h2>Learn Cybersecurity Basics</h2>
+        </div>
+        <div class="cards-grid">
+            <div class="card" tabindex="0">
+                <div class="card-icon">🎣</div>
+                <h3>Phishing</h3>
+                <p>Deceptive emails and messages designed to steal your personal information.</p>
+                <a href="#phishing-detail" class="learn-more">Learn More</a>
+            </div>
+            <details id="phishing-detail">
+                <summary>What is Phishing?</summary>
+                <p>Phishing is a cyber attack that tricks you into giving up sensitive information like passwords or credit card numbers by pretending to be a trustworthy entity. Common signs include suspicious sender addresses, urgent language, and unexpected attachments.</p>
+                <p>Why it is dangerous: Falling for phishing can lead to identity theft, financial loss, and unauthorized access to your accounts.</p>
+                <p>How to protect yourself: Verify sender addresses before clicking links, look for spelling and grammar mistakes, and when in doubt, contact the organization directly.</p>
+            </details>
+
+            <div class="card" tabindex="0">
+                <div class="card-icon">🔒</div>
+                <h3>Password Security</h3>
+                <p>Creating and managing strong passwords to protect your accounts.</p>
+                <a href="#password-detail" class="learn-more">Learn More</a>
+            </div>
+            <details id="password-detail">
+                <summary>Password Security</summary>
+                <p>Strong password security is your first line of defense online. Use unique, complex passwords for each account and consider using a password manager to keep track of them securely.</p>
+                <p>Why it is dangerous: Weak or reused passwords can be easily compromised, leading to account takeovers and credential stuffing attacks.</p>
+                <p>How to protect yourself: Use at least 12 characters with mixed types, never reuse passwords across important accounts, and enable two-factor authentication wherever possible.</p>
+            </details>
+
+            <div class="card" tabindex="0">
+                <div class="card-icon">🦠</div>
+                <h3>Malware</h3>
+                <p>Malicious software that can damage or gain unauthorized access to your systems.</p>
+                <a href="#malware-detail" class="learn-more">Learn More</a>
+            </div>
+            <details id="malware-detail">
+                <summary>Malware</summary>
+                <p>Malware (malicious software) includes viruses, ransomware, spyware, and trojans that can infiltrate your devices. It often spreads through suspicious downloads, email attachments, or compromised websites.</p>
+                <p>Why it is dangerous: Malware can steal data, encrypt your files for ransom, monitor your activities, and create botnets used in further attacks.</p>
+                <p>How to protect yourself: Keep your software and antivirus updated, avoid downloading from untrusted sources, and be cautious with email attachments.</p>
+            </details>
+
+            <div class="card" tabindex="0">
+                <div class="card-icon">🧠</div>
+                <h3>Social Engineering</h3>
+                <p>Manipulating people into performing actions or divulging confidential information.</p>
+                <a href="#social-engineering-detail" class="learn-more">Learn More</a>
+            </div>
+            <details id="social-engineering-detail">
+                <summary>Social Engineering</summary>
+                <p>Social engineering exploits human psychology rather than technical vulnerabilities. Attackers manipulate people into breaking normal security procedures. Common tactics include pretexting, baiting, and tailgating.</p>
+                <p>Why it is dangerous: Social engineering bypasses technical security by targeting human trust, potentially leading to unauthorized access, financial fraud, and data breaches.</p>
+                <p>How to protect yourself: Verify identities before sharing information, be skeptical of unsolicited requests, and educate yourself and others regularly.</p>
+            </details>
+
+            <div class="card" tabindex="0">
+                <div class="card-icon">🔐</div>
+                <h3>Online Privacy</h3>
+                <p>Protecting your personal data and understanding privacy settings.</p>
+                <a href="#privacy-detail" class="learn-more">Learn More</a>
+            </div>
+            <details id="privacy-detail">
+                <summary>Online Privacy</summary>
+                <p>Protecting your online privacy involves managing what personal information you share and who can access it. With proper privacy practices, you can reduce your digital footprint and minimize targeted advertising and profiling.</p>
+                <p>Why it is dangerous: Poor privacy practices can result in targeted advertising, identity theft, profiling, and personal data being sold or exploited by malicious actors.</p>
+                <p>How to protect yourself: Review and adjust social media privacy settings, use browser extensions that block trackers, and be mindful of what you share publicly.</p>
+            </details>
+
+            <div class="card" tabindex="0">
+                <div class="card-icon">🌐</div>
+                <h3>Safe Browsing</h3>
+                <p>Navigating the web securely and avoiding dangerous sites.</p>
+                <a href="#browsing-detail" class="learn-more">Learn More</a>
+            </div>
+            <details id="browsing-detail">
+                <summary>Safe Browsing</summary>
+                <p>Safe browsing practices help you avoid malicious websites, downloads, and online threats. Always check that websites use HTTPS and be cautious of unexpected pop-ups or warnings.</p>
+                <p>Why it is dangerous: Unsafe browsing can result in drive-by downloads, phishing sites, malware infections, and exposure to scams and fraud.</p>
+                <p>How to protect yourself: Look for the padlock icon and HTTPS in the address bar, avoid clicking on suspicious pop-ups, and use a reputable ad-blocker.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="tips" id="tips">
+        <div class="section-header">
+            <h2>Security Tips</h2>
+        </div>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <span class="tip-icon">🔐</span>
+                <h3>Use unique passwords for different accounts</h3>
+                <p>Never reuse the same password across multiple sites. If one account is compromised, all your other accounts remain secure.</p>
+            </div>
+            <div class="tip-card">
+                <span class="tip-icon">🆙</span>
+                <h3>Enable two-factor authentication</h3>
+                <p>Add an extra layer of security to your accounts. Even if someone steals your password, they can't access your account without the second factor.</p>
+            </div>
+            <div class="tip-card">
+                <span class="tip-icon">🚫</span>
+                <h3>Avoid suspicious links</h3>
+                <p>Don't click on links in unexpected emails or messages. Hover over links to see the actual destination before clicking.</p>
+            </div>
+            <div class="tip-card">
+                <span class="tip-icon">📱</span>
+                <h3>Keep software updated</h3>
+                <p>Regularly update your operating system, apps, and antivirus software. Updates often include critical security patches.</p>
+            </div>
+            <div class="tip-card">
+                <span class="tip-icon">🙅</span>
+                <h3>Never share sensitive information with strangers</h3>
+                <p>Be wary of unsolicited requests for personal information, whether by email, phone, or message.</p>
+            </div>
+            <div class="tip-card">
+                <span class="tip-icon">🌐</span>
+                <h3>Check website URLs before entering personal information</h3>
+                <p>Verify you're on the legitimate website before entering passwords or financial details. Look for HTTPS and the correct domain name.</p>
+            </div>
+            <div class="tip-card">
+                <span class="tip-icon">📦</span>
+                <h3>Avoid downloading files from untrusted sources</h3>
+                <p>Only download files from official and trusted sources. Untrusted downloads can contain malware or spyware.</p>
+            </div>
+            <div class="tip-card">
+                <span class="tip-icon">🔒</span>
+                <h3>Use secure Wi-Fi connections</h3>
+                <p>Avoid public Wi-Fi for sensitive transactions. Use a VPN if you must connect to public networks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="knowledge" id="knowledge">
+        <div class="section-header">
+            <h2>Cybersecurity Knowledge Check</h2>
+        </div>
+        <p>Select the best answer for each question. This is a self-assessment activity.</p>
+        <form class="knowledge-check">
+            <div class="question">
+                <h3>Q1: What is phishing?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> An attempt to steal personal information by pretending to be a trusted entity</label>
+                    <label><input type="radio" name="q1" value="b"> A type of computer virus</label>
+                    <label><input type="radio" name="q1" value="c"> A secure email protocol</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>Q2: Which of the following is a strong password practice?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> Reusing the same password across multiple sites</label>
+                    <label><input type="radio" name="q2" value="b"> Using 4-digit numeric passwords</label>
+                    <label><input type="radio" name="q2" value="c"> Using unique, complex passwords for each account</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>Q3: What does HTTPS indicate?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> The website is completely secure</label>
+                    <label><input type="radio" name="q3" value="b"> The website uses encryption for communication</label>
+                    <label><input type="radio" name="q3" value="c"> The website has no ads</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>Q4: Why should you avoid public Wi-Fi for sensitive transactions?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> It is always illegal</label>
+                    <label><input type="radio" name="q4" value="b"> Public networks may not be secure and can expose your data</label>
+                    <label><input type="radio" name="q4" value="c"> It slows down your connection</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>Q5: What is two-factor authentication?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> Two separate passwords</label>
+                    <label><input type="radio" name="q5" value="b"> A password plus a second verification factor</label>
+                    <label><input type="radio" name="q5" value="c"> Authentication that happens twice as fast</label>
+                </div>
+            </div>
+        </form>
+        <div class="answer-key">
+            <details>
+                <summary>Answer Key</summary>
+                <ol>
+                    <li>An attempt to steal personal information by pretending to be a trusted entity</li>
+                    <li>Using unique, complex passwords for each account</li>
+                    <li>The website uses encryption for communication</li>
+                    <li>Public networks may not be secure and can expose your data</li>
+                    <li>A password plus a second verification factor</li>
+                </ol>
+            </details>
         </div>
     </section>
 
@@ -158,97 +246,27 @@
             <h2>About Cyber Awareness Hub</h2>
         </div>
         <p>"Cyber Awareness Hub is an educational website designed to help users understand common cybersecurity threats and develop safer digital habits. Our goal is to make cybersecurity knowledge simple, accessible, and useful for everyone."</p>
+        <div class="about-content">
+            <div class="about-purpose">
+                <h3>Project Purpose</h3>
+                <p>To provide accessible cybersecurity education that helps users understand common threats and develop safer digital habits.</p>
+            </div>
+            <div class="about-goals">
+                <h3>Educational Goals</h3>
+                <ul>
+                    <li>Simplify complex cybersecurity concepts for everyday users</li>
+                    <li>Provide practical, actionable security advice</li>
+                    <li>Encourage safer online behaviors and decision-making</li>
+                    <li>Make cybersecurity knowledge available to everyone</li>
+                </ul>
+            </div>
+            <div class="about-technologies">
+                <h3>Technologies Used</h3>
+                <p>HTML5, CSS3, and Google Fonts (Inter). No JavaScript or external frameworks are used.</p>
+            </div>
+        </div>
     </section>
-
-    <!-- Phishing Modal -->
-<div class="modal" id="phishing-modal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h3>Phishing</h3>
-        <p>Phishing is a cyber attack that tricks you into giving up sensitive information like passwords or credit card numbers by pretending to be a trustworthy entity. Common signs include suspicious sender addresses, urgent language, and unexpected attachments.</p>
-        <p>How to protect yourself:</p>
-        <ul>
-            <li>Verify sender addresses before clicking links</li>
-            <li>Look for spelling and grammar mistakes</li>
-            <li>When in doubt, contact the organization directly</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Passwords Modal -->
-<div class="modal" id="passwords-modal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h3>Password Security</h3>
-        <p>Strong password security is your first line of defense online. Use unique, complex passwords for each account and consider using a password manager to keep track of them securely.</p>
-        <p>Best practices:</p>
-        <ul>
-            <li>Use at least 12 characters with mixed types</li>
-            <li>Never reuse passwords across important accounts</li>
-            <li>Enable two-factor authentication wherever possible</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Malware Modal -->
-<div class="modal" id="malware-modal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h3>Malware</h3>
-        <p>Malware (malicious software) includes viruses, ransomware, spyware, and trojans that can infiltrate your devices. It often spreads through suspicious downloads, email attachments, or compromised websites.</p>
-        <p>Prevention tips:</p>
-        <ul>
-            <li>Keep your software and antivirus updated</li>
-            <li>Avoid downloading from untrusted sources</li>
-            <li>Be cautious with email attachments</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Social Engineering Modal -->
-<div class="modal" id="social-engineering-modal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h3>Social Engineering</h3>
-        <p>Social engineering exploits human psychology rather than technical vulnerabilities. Attackers manipulate people into breaking normal security procedures. Common tactics include pretexting, baiting, and tailgating.</p>
-        <p>Stay safe by:</p>
-        <ul>
-            <li>Verifying identities before sharing information</li>
-            <li>Being skeptical of unsolicited requests</li>
-            <li>Educating yourself and others regularly</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Online Privacy Modal -->
-<div class="modal" id="privacy-modal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h3>Online Privacy</h3>
-        <p>Protecting your online privacy involves managing what personal information you share and who can access it. With proper privacy practices, you can reduce your digital footprint and minimize targeted advertising and profiling.</p>
-        <p>Key steps:</p>
-        <ul>
-            <li>Review and adjust social media privacy settings</li>
-            <li>Use browser extensions that block trackers</li>
-            <li>Be mindful of what you share publicly</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Safe Browsing Modal -->
-<div class="modal" id="browsing-modal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h3>Safe Browsing</h3>
-        <p>Safe browsing practices help you avoid malicious websites, downloads, and online threats. Always check that websites use HTTPS and be cautious of unexpected pop-ups or warnings.</p>
-        <p>Tips for secure browsing:</p>
-        <ul>
-            <li>Look for the padlock icon and HTTPS in the address bar</li>
-            <li>Avoid clicking on suspicious pop-ups</li>
-            <li>Use a reputable ad-blocker</li>
-        </ul>
-    </div>
-</div>
+</main>
 
 <footer class="footer">
     <div class="footer-logo">Cyber Awareness Hub</div>
@@ -259,17 +277,16 @@
         <a href="#home">Home</a>
         <a href="#learn">Learn</a>
         <a href="#tips">Security Tips</a>
-        <a href="#quiz">Quiz</a>
+        <a href="#knowledge">Knowledge Check</a>
         <a href="#about">About</a>
     </div>
     <div class="footer-copyright">
-        &copy; <span id="current-year"></span> Cyber Awareness Hub. All rights reserved.
+        &copy; 2026 Cyber Awareness Hub. All rights reserved.
     </div>
     <div class="footer-stay-aware">
         <p>Stay aware. Stay secure.</p>
     </div>
 </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
