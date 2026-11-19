@@ -507,3 +507,38 @@ body {
     padding-top: 80px; /* Prevents content hiding behind fixed nav */
     padding-bottom: 40px;
 }
+
+/* Ensure images and media scale properly on all devices */
+img,
+picture,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Improve responsive typography */
+h1 {
+    font-size: calc(3rem + 1vw);
+}
+
+h2 {
+    font-size: calc(2rem + 0.5vw);
+}
+
+/* Improve card grid responsiveness */
+.cards-grid {
+    gap: 2rem;
+}
+
+/* Improve tip card responsiveness */
+.tip-card {
+    padding: 2rem;
+}
+
+/* Focus states for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
